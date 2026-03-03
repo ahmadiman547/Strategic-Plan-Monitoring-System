@@ -1,26 +1,26 @@
-# Strategic Plan Monitoring System (Proof of Concept)
+# Strategic Plan Monitoring System (Industry-Led Proof of Concept)
 
 ## Overview
 
-The Strategic Plan Monitoring System is a workflow-driven monitoring platform developed as a Proof of Concept (PoC) to demonstrate how structured governance and performance tracking can be digitized using modular backend architecture and event-driven communication.
+The Strategic Plan Monitoring System is a workflow-driven monitoring platform developed as an industry-led Proof of Concept (PoC). It demonstrates how structured governance and performance tracking can be digitized using modular backend architecture and event-driven communication patterns.
 
-The system supports hierarchical planning structures, progress tracking, evidence submission, and workflow-based approvals.
+The system supports hierarchical strategic planning, progress tracking, evidence submission, and multi-stage workflow approvals within a secure, role-based environment.
 
-> Note: Source code is not publicly available due to confidentiality. This repository documents the architecture, design principles, and technical implementation approach.
+> Note: Source code is not publicly available due to confidentiality. This repository documents the system architecture, design decisions, and technical implementation approach.
 
 ---
 
 ## Problem Statement
 
-Traditional governance and monitoring systems often face:
+Traditional governance and monitoring systems often struggle with:
 
-- Manual tracking processes
-- Limited visibility into approval stages
-- Poor audit traceability
-- Tight coupling between system modules
-- Limited scalability
+- Manual and fragmented tracking processes  
+- Limited visibility into approval workflows  
+- Poor auditability and traceability  
+- Tight coupling between system modules  
+- Limited scalability for growing organizational needs  
 
-This project demonstrates how modular backend services, workflow orchestration, and asynchronous messaging can address these challenges.
+This project demonstrates how modular backend services, workflow orchestration, and asynchronous messaging can address these challenges in a structured and scalable manner.
 
 ---
 
@@ -31,25 +31,25 @@ This project demonstrates how modular backend services, workflow orchestration, 
 ### Core Components
 
 - **Backend Service (Spring Boot)**  
-  Handles REST APIs, business logic, and data persistence.
+  Implements REST APIs, business logic, and structured data persistence.
 
 - **Workflow Engine (Camunda 8)**  
-  Manages approval processes and state transitions.
+  Manages approval processes, task assignments, and state transitions.
 
 - **Event Communication (Apache Kafka)**  
-  Enables asynchronous notifications and system decoupling.
+  Enables asynchronous notifications and service decoupling.
 
 - **Authentication & Authorization (OAuth2 / OIDC via Keycloak)**  
-  Provides role-based access control.
+  Provides secure, role-based access control.
 
 - **Frontend (Angular)**  
-  Implements workflow interfaces and dashboards.
+  Delivers user interfaces for plan submission, tracking, and workflow interaction.
 
 - **Database (MySQL)**  
-  Stores structured domain and workflow-related data.
+  Stores domain entities and workflow-related metadata.
 
 - **Containerization (Docker)**  
-  Ensures consistent deployment environments.
+  Ensures consistent and portable deployment environments.
 
 ---
 
@@ -59,12 +59,12 @@ This project demonstrates how modular backend services, workflow orchestration, 
 
 ### High-Level Flow
 
-1. User submits strategic plan data via Angular frontend.
-2. Backend validates and persists domain entities.
-3. Workflow engine initiates approval process.
-4. Kafka events trigger asynchronous notifications.
+1. A user submits strategic plan data via the Angular frontend.
+2. The backend validates and persists structured domain entities.
+3. The workflow engine initiates an approval process.
+4. Kafka events are published to trigger asynchronous notifications.
 5. Role-based users complete assigned workflow tasks.
-6. Final approval updates system state and audit logs.
+6. Final approval updates system state and audit records.
 
 ---
 
@@ -73,21 +73,25 @@ This project demonstrates how modular backend services, workflow orchestration, 
 ### Design Principles
 
 - Layered architecture (Controller → Service → Repository)
-- Clear domain boundaries
+- Clear separation of domain and workflow state
 - DTO-based API contracts
-- Separation between domain data and workflow state
-- Event-driven communication for decoupling
+- Strong service encapsulation
+- Event-driven communication for decoupling and scalability
+
+This approach ensures maintainability, extensibility, and structured service boundaries.
 
 ---
 
 ## Event-Driven Communication Model
 
-Kafka is used to:
+Apache Kafka is used to:
 
 - Publish workflow state changes
-- Trigger notification processing
-- Decouple core domain logic from auxiliary services
-- Improve scalability and extensibility
+- Trigger notification and downstream processing
+- Decouple domain logic from auxiliary services
+- Improve scalability and fault isolation
+
+This design reduces tight coupling and improves system resilience.
 
 ---
 
@@ -97,10 +101,12 @@ Kafka is used to:
 
 The relational model supports:
 
-- Strategic plan hierarchy
-- Approval state tracking
-- Evidence metadata storage
-- Role-based user mapping
+- Hierarchical strategic planning structures
+- Workflow state tracking
+- Evidence metadata management
+- Role-based user associations
+
+The schema design emphasizes normalization, traceability, and structured governance relationships.
 
 ---
 
@@ -135,13 +141,13 @@ The relational model supports:
 
 ## Engineering Focus
 
-This project demonstrates:
+This project demonstrates practical experience in:
 
 - Modular backend architecture
 - RESTful API design
 - Workflow orchestration integration
-- Event-driven communication
-- Role-based access control
+- Event-driven system design
+- Role-based access control implementation
 - Containerized deployment strategy
 
 ---
@@ -149,22 +155,22 @@ This project demonstrates:
 ## Learning Outcomes
 
 - Designing scalable backend systems
-- Implementing workflow-based business processes
+- Structuring workflow-driven business processes
 - Applying asynchronous messaging patterns
-- Managing secure authentication flows
-- Structuring maintainable service layers
+- Implementing secure authentication flows
+- Maintaining clean and modular service architecture
 
 ---
 
 ## Future Improvements
 
-- Horizontal scalability
-- Observability (metrics & tracing)
-- Cloud-native deployment
-- Performance benchmarking
+- Horizontal service scaling
+- Observability (metrics, logging, tracing)
+- Cloud-native deployment strategies
+- Performance benchmarking and load testing
 
 ---
 
 ## Disclaimer
 
-This repository documents the architectural design and implementation concepts of a Proof of Concept system developed in collaboration with an industry partner. Source code and business logic are not publicly shared due to confidentiality.
+This repository documents the architectural design and technical implementation approach of an industry-led Proof of Concept system. Source code and business logic are not publicly shared due to confidentiality constraints.
