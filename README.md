@@ -1,5 +1,13 @@
 # Strategic Plan Monitoring System (Industry-Led Proof of Concept)
 
+![Java](https://img.shields.io/badge/Java-17-orange)
+![Spring Boot](https://img.shields.io/badge/SpringBoot-3.x-brightgreen)
+![Angular](https://img.shields.io/badge/Angular-16-red)
+![Kafka](https://img.shields.io/badge/Kafka-Event--Driven-black)
+![Camunda](https://img.shields.io/badge/Camunda-8-blue)
+![Docker](https://img.shields.io/badge/Docker-Containerized-blue)
+![OAuth2](https://img.shields.io/badge/Security-OAuth2%20%2F%20OIDC-lightgrey)
+
 ## Overview
 
 The Strategic Plan Monitoring System is a workflow-driven monitoring platform developed as an industry-led Proof of Concept (PoC). It demonstrates how structured governance and performance tracking can be digitized using modular backend architecture and event-driven communication patterns.
