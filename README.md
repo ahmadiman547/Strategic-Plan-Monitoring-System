@@ -26,7 +26,7 @@ This project demonstrates how modular backend services, workflow orchestration, 
 
 ## High-Level Architecture
 
-![System Architecture](./images/system-architecture.png)
+![System Architecture](./images/architecture.png)
 
 ### Core Components
 
@@ -55,7 +55,7 @@ This project demonstrates how modular backend services, workflow orchestration, 
 
 ## System Workflow
 
-![Workflow Sequence](./images/workflow-sequence.png)
+![Workflow Sequence](./images/Diagrams-Sequence.drawio.png)
 
 ### High-Level Flow
 
@@ -70,8 +70,6 @@ This project demonstrates how modular backend services, workflow orchestration, 
 
 ## Backend Architecture Design
 
-![Backend Architecture](./images/backend-architecture.png)
-
 ### Design Principles
 
 - Layered architecture (Controller → Service → Repository)
@@ -84,8 +82,6 @@ This project demonstrates how modular backend services, workflow orchestration, 
 
 ## Event-Driven Communication Model
 
-![Event Flow Diagram](./images/event-flow.png)
-
 Kafka is used to:
 
 - Publish workflow state changes
@@ -97,7 +93,7 @@ Kafka is used to:
 
 ## Data Model Overview
 
-![Entity Relationship Diagram](./images/erd-diagram.png)
+![Entity Relationship Diagram](./images/ERD.png)
 
 The relational model supports:
 
